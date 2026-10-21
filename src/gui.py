@@ -1245,7 +1245,7 @@ class StagePositionFrame:
             assert step_size > 0, "step size should be greater than zero"
             movement = step_size if direction == Direction.POS else -step_size
             if axis == Axis.X:
-                self.event_dispatcher.move_relative({"x": movement})
+                self.event_dispatcher.move_relative({"x": -movement})
             elif axis == Axis.Y:
                 self.event_dispatcher.move_relative({"y": movement})
             else:
